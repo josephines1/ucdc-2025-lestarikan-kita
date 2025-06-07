@@ -22,3 +22,29 @@ document.addEventListener("click", function (e) {
     checkbox.checked = false;
   }
 });
+
+// Kondisi
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});

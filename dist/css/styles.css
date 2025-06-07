@@ -18,6 +18,14 @@
   font-family: "Poppins", sans-serif;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Nav Styles */
 .nav-mobile {
   width: 2rem;
@@ -125,4 +133,34 @@
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.swiper-container-fix {
+  overflow: visible !important;
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  padding: 20px;
+}
+
+.swiper-pagination-bullet {
+  background: #626f47;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #353c26;
+  opacity: 1;
 }
