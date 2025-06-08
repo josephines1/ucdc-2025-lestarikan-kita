@@ -25,7 +25,6 @@ document.addEventListener("click", function (e) {
 
 // Kondisi
 const swiper = new Swiper(".mySwiper", {
-  spaceBetween: 24,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

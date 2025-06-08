@@ -129,7 +129,7 @@
 
 /* Hero Styles */
 #hero {
-  background: url(../../assets/hero-wave.svg);
+  /* background: url(../../assets/hero-wave.svg); */
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
@@ -163,4 +163,18 @@
 .swiper-pagination-bullet-active {
   background: #353c26;
   opacity: 1;
+}
+
+.scroll-track {
+  animation: scroll-left 30s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
