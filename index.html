@@ -1,78 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lestarikan Kita</title>
+    <title>LestarikanKita</title>
 
     <!-- CDN Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- CDN Swiper Js -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Google Fonts - Poppins -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
-    <!-- CDN - Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <!-- CDN Swiper Js -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="./dist/css/styles.css" />
-
-    <!-- TODO: Web Icon -->
-    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/styles.css" />
   </head>
-  <body class="leading-normal bg-[#F5ECD5]">
-    <!-- Nav - start -->
-    <nav class="p-4 fixed left-0 right-0 z-50">
+  <body class="h-[3000px]">
+    <!-- Nav -->
+    <nav class="z-50 fixed top-0 left-0 right-0 p-4 animate-slide-down">
       <div
-        class="container flex justify-between items-center mx-auto bg-[#F0BB78] p-4 rounded-xl shadow-md"
+        class="container mx-auto max-w-4xl flex justify-between items-center bg-[#A4B465]/80 p-4 rounded-lg shadow-lg"
       >
-        <!-- Logo -->
         <div class="logo">
-          <a href="." class="flex gap-4 items-center">
-            <img
-              src="./assets/logo-with-text.svg"
-              class="h-[50px]"
-              alt="Logo"
-            />
-          </a>
+          <img
+            src="./assets/logo-with-text.svg"
+            alt="LestarikanKami"
+            class="h-[40px]"
+          />
         </div>
-
-        <!-- Nav Links -->
-        <ul class="nav-links flex gap-4">
-          <li class="nav-item"><a href="#tentang">Tentang</a></li>
-          <li class="nav-item"><a href="#realita">Realita</a></li>
-          <li class="nav-item"><a href="#aksi">Aksi</a></li>
-          <li class="nav-item">
+        <ul class="nav-links menu flex gap-4 text-xs">
+          <li>
             <a
-              href="#daily-challenge"
-              class="bg-[#626F47] px-8 py-2 rounded-full text-white shadow-lg hover:bg-[#4f573e] transition-all duration-300"
-              >Yuk, Mulai Kontribusi!</a
+              class="hover:text-white transition-all duration-300"
+              href="#tentang"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-white transition-all duration-300"
+              href="#realita"
+              >Realita</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-white transition-all duration-300" href="#aksi"
+              >Aksi</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-white transition-all duration-300"
+              href="#komunitas"
+              >Komunitas</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-white transition-all duration-300"
+              href="#kontribusi"
+              >Kontribusi</a
             >
           </li>
         </ul>
@@ -85,446 +76,144 @@
           <div></div>
         </div>
 
-        <!-- TODO: Update this with nav links on desktop -->
         <!-- Nav Links on Mobile -->
-        <ul class="nav-links-mobile">
+        <ul class="nav-links-mobile text-xs md:hidden rounded-lg">
           <li><a href="#tentang">Tentang</a></li>
           <li><a href="#realita">Realita</a></li>
           <li><a href="#aksi">Aksi</a></li>
-          <li>
-            <a
-              href="#daily-challenge"
-              class="bg-[#626F47] px-8 py-2 rounded-full text-white shadow-lg hover:bg-[#4f573e] transition-all duration-300"
-              >Yuk, Mulai Kontribusi!</a
-            >
-          </li>
+          <li><a href="#komunitas">Komunitas</a></li>
+          <li><a href="#kontribusi">Kontribusi</a></li>
         </ul>
       </div>
     </nav>
-    <!-- Nav - end -->
 
-    <!-- Hero - start -->
-    <section id="hero" class="relative overflow-x-hidden">
-      <div
-        class="container px-4 lg:px-12 mx-auto text-center flex flex-col justify-center items-center gap-8 min-h-screen relative"
-      >
-        <div class="hero-text flex flex-col gap-2 mx-auto z-30">
-          <h1
-            class="font-medium text-2xl lg:text-4xl max-w-2xl mx-auto leading-10"
-          >
+    <!-- Hero -->
+    <section
+      id="hero"
+      class="bg-[url(./assets/bg-hero-3.jpg)] bg-bottom h-screen bg-cover relative"
+    >
+      <div class="absolute inset-0 bg-black/40 z-0"></div>
+      <div class="relative z-10">
+        <div
+          class="container px-4 mx-auto flex flex-col items-center justify-center gap-2 h-screen max-w-2xl animate-slide-up"
+        >
+          <h1 class="text-white text-xl lg:text-3xl text-center font-bold">
             Bersama Lestarikan Bumi
-            <span class="block lg:text-5xl font-bold lg:mt-2">
+            <span class="block text-3xl lg:text-5xl">
               Mulai dari Kita, untuk Kita
             </span>
           </h1>
-          <p class="leading-loose font-light opacity-75 max-w-xl mx-auto">
-            Wujudkan bumi hijau bersama. Aksi sederhana, dampak nyata, perubahan
-            besar dimulai dari kamu.
+          <p class="text-white text-center text-sm lg:text-md opacity-70">
+            Mari bergabung gerakan kolaboratif untuk bumi yang lebih hijau.
+            Temukan aksi sederhana, hitung dampakmu, dan jadilah bagian dari
+            perubahan.
           </p>
         </div>
-        <div class="hero-cta">
-          <a
-            href="#"
-            class="bg-[#626F47] px-8 py-2 rounded-full text-white shadow-lg text-lg hover:bg-[#4f573e] transition-all duration-300"
-            >Mari Kita Mulai</a
-          >
-        </div>
-        <div class="pohon opacity-90">
-          <div
-            class="absolute -left-24 md:-left-6 md:-bottom-12 -bottom-44 scale-20 md:scale-60"
-          >
-            <img src="./assets/hero/pohon-1.gif" alt="Pohon" />
-          </div>
-          <div
-            class="absolute -right-24 md:-right-12 md:-bottom-12 -bottom-28 scale-30 md:scale-40"
-          >
-            <img src="./assets/hero/pohon-2.gif" alt="Pohon" />
-          </div>
-        </div>
       </div>
-      <!-- <div
-        class="background-bumi absolute -right-20 bottom-0 top-0 opacity-20 -z-100"
+      <div class="absolute bottom-0 animate-slide-up">
+        <img
+          src="./assets/wave-hero-tentang-4.svg"
+          alt="LestarikanKita"
+          class="w-screen h-full"
+        />
+      </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="bg-[#F5ECD5] relative">
+      <div class="waves">
+        <img
+          src="./assets/wave-hero-tentang-2.svg"
+          alt=""
+          class="absolute top-0 right-0 left-0 z-6"
+        />
+        <img
+          src="./assets/wave-hero-tentang-3.svg"
+          alt=""
+          class="absolute top-4 right-0 left-0 z-4"
+        />
+        <img
+          src="./assets/wave-hero-tentang-1.svg"
+          alt=""
+          class="absolute top-8 right-0 left-0 z-2"
+        />
+      </div>
+      <div
+        class="container px-4 mx-auto pb-20 lg:pt-60 pt-40 flex flex-col md:flex-row items-center justify-stretch lg:gap-8 gap-4 w-full relative h-[700px]"
       >
-        <img src="./assets/hero/bumi.webp" alt="Bumi" class="h-full" />
-      </div> -->
-      <div class="background-waves absolute right-0 left-0 bottom-0 -z-50">
-        <img src="./assets/hero-wave.svg" alt="Wave" />
-      </div>
-    </section>
-    <!-- Hero - end -->
-
-    <!-- Tentang - start -->
-    <section id="tentang">
-      <div class="overflow-hidden whitespace-nowrap bg-[#A4B465] py-4">
-        <div class="scroll-track flex">
-          <!-- Logo set 1 -->
-          <div class="flex shrink-0">
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-          </div>
-          <!-- Logo set 2 (identik) -->
-          <div class="flex shrink-0">
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-          </div>
-          <!-- Logo set 3 (identik) -->
-          <div class="flex shrink-0">
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-          </div>
+        <div class="w-full">
+          <h2 class="text-[#233f33] text-2xl lg:text-4xl font-bold uppercase">
+            Tentang
+          </h2>
+          <img
+            src="./assets/logo-with-text.svg"
+            alt="LestarikanKita"
+            class="h-[50px] md:h-[100px]"
+          />
         </div>
-      </div>
 
-      <div class="container py-12 px-4 lg:px-12 mx-auto">
-        <div class="flex flex-col lg:items-center gap-8">
-          <div class="flex flex-col gap-4 text-center">
-            <h2 class="font-bold text-2xl">Tentang</h2>
-            <img
-              src="./assets/logo-with-text.svg"
-              alt="LestarikanKita"
-              class="mx-auto lg:ms-0"
-            />
-          </div>
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div class="card visi border-1 rounded-md p-4">
-              <h3 class="font-bold text-lg">Visi Kami</h3>
-              <p class="font-light text-md leading-relaxed">
-                Mewujudkan generasi muda Indonesia yang aktif, peduli, dan
-                berdaya dalam menjaga kelestarian lingkungan demi masa depan
-                yang berkelanjutan dan harmonis antara manusia dan alam.
-              </p>
-            </div>
-            <div class="card misi border-1 rounded-md p-4">
-              <h3 class="font-bold text-lg">Misi Kami</h3>
-              <ul class="list-disc">
-                <li class="font-light text-md leading-relaxed ms-4">
-                  Menginspirasi dan memberdayakan anak muda Indonesia untuk
-                  mengambil aksi nyata dalam menjaga dan melestarikan
-                  lingkungan.
-                </li>
-                <li class="font-light text-md leading-relaxed ms-4">
-                  Menyediakan edukasi lingkungan yang inovatif, interaktif, dan
-                  mudah diakses melalui teknologi digital.
-                </li>
-                <li class="font-light text-md leading-relaxed ms-4">
-                  Mendorong kolaborasi komunitas dan kampanye aksi nyata demi
-                  terciptanya perubahan positif bagi bumi.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div
+          class="misi relative lg:absolute lg:right-4 lg:top-70 w-100 h-36 rounded-full flex items-center justify-start lg:justify-center text-center px-6 py-4 scale-70 md:scale-100"
+        >
+          <img
+            src="./assets/cloud.svg"
+            alt="Daun"
+            class="absolute left-0 right-0"
+          />
 
-      <div class="overflow-hidden whitespace-nowrap bg-[#A4B465] py-4">
-        <div class="scroll-track flex">
-          <!-- Logo set 1 -->
-          <div class="flex shrink-0">
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-          </div>
-          <!-- Logo set 2 (identik) -->
-          <div class="flex shrink-0">
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-          </div>
-          <!-- Logo set 3 (identik) -->
-          <div class="flex shrink-0">
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-            <img src="./assets/logo-with-text.svg" class="h-8 px-4" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Tentang - end -->
-
-    <!-- Realita - start -->
-    <section id="realita" class="relative">
-      <div class="container px-4 lg:px-12 py-20 mx-auto">
-        <h2 class="font-bold text-2xl text-center">
-          Kondisi Indonesia Saat Ini
-        </h2>
-        <div class="kondisi-carousel mt-8">
-          <div
-            id="carousel-wrapper"
-            class="overflow-hidden flex snap-x snap-mandatory scroll-smooth no-scrollbar"
+          <h3
+            class="text-[#233f33] text-lg lg:text-2xl font-bold uppercase absolute right-0 -bottom-5"
           >
-            <!-- Swiper Container -->
-            <div class="flex flex-col items-center w-full">
-              <div
-                class="swiper mySwiper w-full swiper-container-fix overflow-visible"
-              >
-                <div class="swiper-wrapper overflow-visible">
-                  <!-- Swiper Slide 1 -->
-                  <div
-                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
-                  >
-                    <div
-                      class="relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
-                    >
-                      <img
-                        src="./assets/kondisi/global-warming.png"
-                        alt="global-warming"
-                        class="h-[240px] mx-auto"
-                      />
-                    </div>
-                    <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-3 text-center px-4"
-                    >
-                      <p class="text-gray-700 text-sm font-medium">
-                        Indonesia mengalami kenaikan suhu rata-rata 0,3 - 0,6°C
-                        pada 2025.
-                      </p>
-                    </div>
-                  </div>
+            Misi
+          </h3>
 
-                  <!-- Swiper Slide 2 -->
-                  <div
-                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
-                  >
-                    <div
-                      class="relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
-                    >
-                      <img
-                        src="./assets/kondisi/deforestasi.png"
-                        alt="global-warming"
-                        class="h-[240px] mx-auto"
-                      />
-                    </div>
-                    <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-3 text-center px-4"
-                    >
-                      <p class="text-gray-700 text-sm font-medium">
-                        Tahun 2024, Indonesia kehilangan 261.575 hektare hutan
-                        (4x luas Jakarta).
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- Swiper Slide 3 -->
-                  <div
-                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
-                  >
-                    <div
-                      class="relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
-                    >
-                      <img
-                        src="./assets/kondisi/sampah-di-laut.png"
-                        alt="global-warming"
-                        class="h-[240px] mx-auto"
-                      />
-                    </div>
-                    <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-3 text-center px-4"
-                    >
-                      <p class="text-gray-700 text-sm font-medium">
-                        Indonesia adalah penghasil sampah plastik laut terbesar
-                        kedua di dunia. 0,27–0,9 juta ton sampah plastik masuk
-                        ke laut setiap tahun.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- Swiper Slide 4 -->
-                  <div
-                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
-                  >
-                    <div
-                      class="relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
-                    >
-                      <img
-                        src="./assets/kondisi/kekurangan-air-bersih.png"
-                        alt="global-warming"
-                        class="h-[240px] mx-auto"
-                      />
-                    </div>
-                    <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-3 text-center px-4"
-                    >
-                      <p class="text-gray-700 text-sm font-medium">
-                        1 dari 4 orang di Indonesia berisiko kekurangan air
-                        bersih pada 2025
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- Swiper Slide 5 -->
-                  <div
-                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
-                  >
-                    <div
-                      class="relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
-                    >
-                      <img
-                        src="./assets/kondisi/terumbu-karang.png"
-                        alt="global-warming"
-                        class="h-[240px] mx-auto"
-                      />
-                    </div>
-                    <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-3 text-center px-4"
-                    >
-                      <p class="text-gray-700 text-sm font-medium">
-                        Indonesia berisiko kehilangan 25-82% tutupan terumbu
-                        karang pada 2100 dan penurunan populasi burung hingga
-                        60% di Sulawesi pada 2050 akibat perubahan iklim.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pagination Dots BELOW the carousel -->
-              <div class="swiper-pagination mt-6 !relative"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Realita - end -->
-
-    <!-- Aksi - start -->
-    <!-- TODO: Tambahkan Button untuk PopUp Detail Aksi nya (Dampak, Statistik) -->
-    <!-- TODO: Ganti icon dengan gambar realistis -->
-    <section id="aksi" class="bg-[#a4b465]">
-      <div class="container px-4 lg:px-12 mx-auto py-20">
-        <div class="flex items-center justify-between">
-          <div class="flex flex-col">
-            <p
-              class="text-left font-semibold lg:text-4xl lg:leading-tight leading-normal text-xl w-full"
-            >
-              Mulai dari Kita
-            </p>
-            <h1
-              class="text-left lg:leading-loose leading-normal text-md opacity-50 w-full"
-            >
-              Cara-Cara Simpel Peduli Lingkungan
-            </h1>
-          </div>
-          <a
-            href="./aksi.html"
-            class="bg-[#F0BB78] px-8 py-2 rounded-full shadow-lg text-lg hover:bg-[#4f573e] transition-all duration-300"
-            >Lihat Semua</a
+          <!-- Teks -->
+          <p
+            class="absolute z-10 text-xs px-8 leading-snug font-medium text-white right-0 left-0"
           >
+            Mewujudkan generasi muda Indonesia yang aktif, peduli, dan berdaya
+            dalam menjaga kelestarian lingkungan demi masa depan yang
+            berkelanjutan dan harmonis antara manusia dan alam.
+          </p>
         </div>
 
-        <div class="swiper cardsSwiper w-full cards-swiper-container mt-12">
-          <div class="swiper-wrapper cards-swiper-wrapper">
-            <!-- Card 1 -->
-            <div class="swiper-slide !p-0 card-slide">
-              <div
-                class="group bg-transparent rounded-md shadow-xl border relative w-full overflow-hidden h-[400px]"
-              >
-                <div
-                  class="h-full w-full bg-gradient-to-br from-emerald-400 via-teal-500 to-blue-600 flex items-center justify-center"
-                >
-                  <span class="text-white text-6xl">🌱</span>
-                </div>
-                <div
-                  class="bottom-0 lg:group-hover:bottom-0 absolute lg:-bottom-24 transition-all duration-300 w-full bg-gradient-to-t from-black/100 to-transparent text-white p-4"
-                >
-                  <h2 class="text-lg font-bold mb-2">Reduce Plastic Use</h2>
-                  <p class="text-sm lg:text-base">
-                    Opt for reusable bags and containers.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div
+          class="visi relative md:absolute -bottom-[180px] md:-bottom-10 md:right-40 w-150 rounded-full flex items-center justify-start md:justify-center text-center px-6 py-4 scale-60 md:scale-100"
+        >
+          <img
+            src="./assets/pohon.png"
+            alt="Pohon"
+            class="absolute right-0 left-0"
+          />
 
-            <!-- Card 2 -->
-            <div class="swiper-slide !p-0 card-slide">
-              <div
-                class="group bg-transparent rounded-md shadow-xl border relative w-full overflow-hidden h-[400px]"
-              >
-                <div
-                  class="h-full w-full bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 flex items-center justify-center"
-                >
-                  <span class="text-white text-6xl">🌳</span>
-                </div>
-                <div
-                  class="bottom-0 lg:group-hover:bottom-0 absolute lg:-bottom-24 transition-all duration-300 w-full bg-gradient-to-t from-black/100 to-transparent text-white p-4"
-                >
-                  <h2 class="text-lg font-bold mb-2">Plant Trees</h2>
-                  <p class="text-sm lg:text-base">
-                    Join local tree planting activities.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <h3
+            class="text-[#233f33] text-lg lg:text-2xl font-bold uppercase absolute right-30 bottom-35 md:right-28"
+          >
+            Visi
+          </h3>
 
-            <!-- Card 3 -->
-            <div class="swiper-slide !p-0 card-slide">
-              <div
-                class="group bg-transparent rounded-md shadow-xl border relative w-full overflow-hidden h-[400px]"
-              >
-                <div
-                  class="h-full w-full bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 flex items-center justify-center"
-                >
-                  <span class="text-white text-6xl">🚲</span>
-                </div>
-                <div
-                  class="bottom-0 lg:group-hover:bottom-0 absolute lg:-bottom-24 transition-all duration-300 w-full bg-gradient-to-t from-black/100 to-transparent text-white p-4"
-                >
-                  <h2 class="text-lg font-bold mb-2">Walk or Cycle</h2>
-                  <p class="text-sm lg:text-base">
-                    Use alternative transport for short distances.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="swiper-slide !p-0 card-slide">
-              <div
-                class="group bg-transparent rounded-md shadow-xl border relative w-full overflow-hidden h-[400px]"
-              >
-                <div
-                  class="h-full w-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 flex items-center justify-center"
-                >
-                  <span class="text-white text-6xl">💧</span>
-                </div>
-                <div
-                  class="bottom-0 lg:group-hover:bottom-0 absolute lg:-bottom-24 transition-all duration-300 w-full bg-gradient-to-t from-black/100 to-transparent text-white p-4"
-                >
-                  <h2 class="text-lg font-bold mb-2">Conserve Water</h2>
-                  <p class="text-sm lg:text-base">
-                    Take shorter showers and fix leaks.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pagination -->
-          <div class="card-pagination mt-6 !relative text-center"></div>
+          <p class="text-xs absolute left-5 w-50 -top-15">
+            Menginspirasi dan memberdayakan anak muda Indonesia untuk mengambil
+            aksi nyata dalam menjaga dan melestarikan lingkungan.
+          </p>
+          <p class="text-xs absolute left-50 -top-45 w-50">
+            Menyediakan edukasi lingkungan yang inovatif, interaktif, dan mudah
+            diakses melalui teknologi digital.
+          </p>
+          <p class="text-xs absolute right-5 w-50 -top-15">
+            Mendorong kolaborasi komunitas dan kampanye aksi nyata demi
+            terciptanya perubahan positif bagi bumi.
+          </p>
         </div>
       </div>
     </section>
-    <!-- Aksi - end -->
+
+    <!-- Realita -->
+    <section id="realita" class="bg-[#d8ccaf]"></section>
+
+    <!-- Aksi -->
+    <!-- Komunitas -->
+    <!-- Kontribusi (Daily Challenge) -->
 
     <!-- JavaScript -->
     <script src="./dist/js/script.js"></script>

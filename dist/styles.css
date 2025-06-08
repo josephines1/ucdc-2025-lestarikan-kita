@@ -1,0 +1,147 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h1 *,
+h2 *,
+h3 * {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Nav */
+/* Nav Styles */
+.nav-mobile {
+  width: 2rem;
+  height: 1.7rem;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  display: none;
+}
+
+.nav-mobile input {
+  width: 2rem;
+  height: 1.7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+
+.nav-mobile div {
+  height: 3px;
+  border-radius: 5px;
+  background-color: #000;
+  transform-origin: top right;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-mobile input:checked ~ div {
+  background-color: #fff;
+}
+
+.nav-mobile input:checked ~ div:nth-child(2) {
+  transform: rotate(-45deg) translate(-3px, 1.5px);
+}
+
+.nav-mobile input:checked ~ div:nth-child(3) {
+  transform: scaleX(0);
+}
+
+.nav-mobile input:checked ~ div:nth-child(4) {
+  transform: rotate(45deg) translate(2.5px, -0.3px);
+}
+
+.nav-links-mobile {
+  position: absolute;
+  top: calc(100%);
+  right: 4%;
+  left: 4%;
+  background-color: rgba(164, 180, 101, 0.8);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s cubic-bezier(0.075, 0.885, 0.32, 1.275);
+}
+
+.nav-links-mobile.active {
+  height: 200px;
+}
+
+.nav-links-mobile li {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-links-mobile li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links-mobile li:hover a {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-links-mobile {
+    width: unset;
+    left: 4%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.8s ease-out forwards;
+}
