@@ -155,15 +155,3 @@ h3 * {
   background: #233f33;
   opacity: 1;
 }
-
-.swiper-container-fix {
-  overflow: visible !important;
-}
-
-.swiper-wrapper {
-  overflow: visible !important;
-}
-
-.swiper-slide {
-  padding: 20px;
-}

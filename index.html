@@ -242,26 +242,34 @@
             <!-- Swiper Container -->
             <div class="flex flex-col items-center w-full">
               <div
-                class="swiper mySwiper w-full swiper-container-fix overflow-visible"
+                class="swiper kondisi-swiper w-full swiper-container-fix h-[400px]"
               >
-                <div class="swiper-wrapper overflow-visible">
+                <div class="swiper-wrapper">
                   <!-- Swiper Slide 1 -->
                   <div
-                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300 p-10"
+                    class="bg-[#706242] rounded-xl overflow-hidden swiper-slide group relative z-0 hover:z-30 transition-all duration-300"
                   >
+                    <!-- Overlay yang menutupi gambar -->
                     <div
-                      class="bg-[#706242] shadow-md relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto p-10 flex items-center justify-center hover:shadow-2xl"
+                      class="absolute inset-0 bg-black/50 bg-opacity-50 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-10"
+                    ></div>
+
+                    <!-- Konten gambar -->
+                    <div
+                      class="absolute inset-0 mx-auto flex items-center justify-center overflow-hidden z-0 h-full"
                     >
                       <img
                         src="./assets/realita/global-warming.png"
                         alt="global-warming"
-                        class="h-[180px]"
+                        class="object-cover w-full max-w-[300px] mx-auto group-hover:scale-110 transition-all duration-300"
                       />
                     </div>
+
+                    <!-- Deskripsi -->
                     <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                      class="z-20 absolute inset-0 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center"
                     >
-                      <p class="opacity-80 text-sm font-medium">
+                      <p class="text-md font-medium p-5 text-white">
                         Indonesia mengalami kenaikan suhu rata-rata 0,3 - 0,6°C
                         pada 2025.
                       </p>
@@ -270,21 +278,29 @@
 
                   <!-- Swiper Slide 2 -->
                   <div
-                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300 p-10"
+                    class="bg-[#706242] rounded-xl overflow-hidden swiper-slide group relative z-0 hover:z-30 transition-all duration-300"
                   >
+                    <!-- Overlay yang menutupi gambar -->
                     <div
-                      class="bg-[#706242] shadow-md hover:shadow-xl relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto p-10 flex items-center justify-center"
+                      class="absolute inset-0 bg-black/50 bg-opacity-50 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-10"
+                    ></div>
+
+                    <!-- Konten gambar -->
+                    <div
+                      class="absolute inset-0 mx-auto flex items-center justify-center overflow-hidden z-0 h-full"
                     >
                       <img
                         src="./assets/realita/deforestasi.png"
                         alt="deforestasi"
-                        class="h-[180px]"
+                        class="object-cover w-full max-w-[300px] mx-auto group-hover:scale-110 transition-all duration-300"
                       />
                     </div>
+
+                    <!-- Deskripsi -->
                     <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                      class="z-20 absolute inset-0 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center"
                     >
-                      <p class="opacity-80 text-sm font-medium">
+                      <p class="text-md font-medium p-5 text-white">
                         Tahun 2024, Indonesia kehilangan 261.575 hektare hutan
                         (4x luas Jakarta).
                       </p>
@@ -293,21 +309,29 @@
 
                   <!-- Swiper Slide 3 -->
                   <div
-                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300 p-10"
+                    class="bg-[#706242] rounded-xl overflow-hidden swiper-slide group relative z-0 hover:z-30 transition-all duration-300"
                   >
+                    <!-- Overlay yang menutupi gambar -->
                     <div
-                      class="bg-[#706242] shadow-md hover:shadow-xl flex items-center justify-center p-10 relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
+                      class="absolute inset-0 bg-black/50 bg-opacity-50 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-10"
+                    ></div>
+
+                    <!-- Konten gambar -->
+                    <div
+                      class="absolute inset-0 mx-auto flex items-center justify-center overflow-hidden z-0 h-full"
                     >
                       <img
                         src="./assets/realita/sampah-di-laut.png"
                         alt="Sampah di laut"
-                        class="h-[180px]"
+                        class="object-cover w-full max-w-[300px] mx-auto group-hover:scale-110 transition-all duration-300"
                       />
                     </div>
+
+                    <!-- Deskripsi -->
                     <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                      class="z-20 absolute inset-0 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center"
                     >
-                      <p class="opacity-80 text-sm font-medium">
+                      <p class="text-md font-medium p-5 text-white">
                         Indonesia adalah penghasil sampah plastik laut terbesar
                         kedua di dunia. 0,27 - 0,9 juta ton sampah plastik masuk
                         ke laut setiap tahun.
@@ -317,21 +341,29 @@
 
                   <!-- Swiper Slide 4 -->
                   <div
-                    class="p-10 swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
+                    class="bg-[#706242] rounded-xl overflow-hidden swiper-slide group relative z-0 hover:z-30 transition-all duration-300"
                   >
+                    <!-- Overlay yang menutupi gambar -->
                     <div
-                      class="shadow-lg bg-[#706242] p-10 flex items-center justify-center relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
+                      class="absolute inset-0 bg-black/50 bg-opacity-50 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-10"
+                    ></div>
+
+                    <!-- Konten gambar -->
+                    <div
+                      class="absolute inset-0 mx-auto flex items-center justify-center overflow-hidden z-0 h-full"
                     >
                       <img
                         src="./assets/realita/kekurangan-air-bersih.png"
                         alt="Kekurangan air bersih"
-                        class="h-[180px]"
+                        class="object-cover w-full max-w-[300px] mx-auto group-hover:scale-110 transition-all duration-300"
                       />
                     </div>
+
+                    <!-- Deskripsi -->
                     <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                      class="z-20 absolute inset-0 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center"
                     >
-                      <p class="opacity-80 text-sm font-medium">
+                      <p class="text-md font-medium p-5 text-white">
                         1 dari 4 orang di Indonesia berisiko kekurangan air
                         bersih pada 2025
                       </p>
@@ -340,21 +372,29 @@
 
                   <!-- Swiper Slide 5 -->
                   <div
-                    class="p-10 swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
+                    class="bg-[#706242] rounded-xl overflow-hidden swiper-slide group relative z-0 hover:z-30 transition-all duration-300"
                   >
+                    <!-- Overlay yang menutupi gambar -->
                     <div
-                      class="shadow-md hover:shadow-lg bg-[#706242] p-10 flex items-center justify-center relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
+                      class="absolute inset-0 bg-black/50 bg-opacity-50 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 z-10"
+                    ></div>
+
+                    <!-- Konten gambar -->
+                    <div
+                      class="absolute inset-0 mx-auto flex items-center justify-center overflow-hidden z-0 h-full"
                     >
                       <img
                         src="./assets/realita/terumbu-karang.png"
-                        alt="global-warming"
-                        class="h-[180px]"
+                        alt="Perubahan iklim"
+                        class="object-cover w-full max-w-[300px] mx-auto group-hover:scale-110 transition-all duration-300"
                       />
                     </div>
+
+                    <!-- Deskripsi -->
                     <div
-                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                      class="z-20 absolute inset-0 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center"
                     >
-                      <p class="opacity-80 text-sm font-medium">
+                      <p class="text-md font-medium p-5 text-white">
                         Indonesia berisiko kehilangan 25-82% tutupan terumbu
                         karang pada 2100 dan penurunan populasi burung hingga
                         60% di Sulawesi pada 2050 akibat perubahan iklim.
@@ -373,6 +413,10 @@
     </section>
 
     <!-- Aksi -->
+    <section id="aksi">
+      <div class="container py-20 px-4 mx-auto"></div>
+    </section>
+
     <!-- Komunitas -->
     <!-- Kontribusi (Daily Challenge) -->
 

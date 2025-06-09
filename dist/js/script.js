@@ -24,7 +24,8 @@ document.addEventListener("click", function (e) {
 });
 
 // Kondisi
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".kondisi-swiper", {
+  spaceBetween: 24,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -43,9 +44,6 @@ const swiper = new Swiper(".mySwiper", {
     },
     1024: {
       slidesPerView: 3,
-    },
-    2560: {
-      slidesPerView: 5,
     },
   },
 });
