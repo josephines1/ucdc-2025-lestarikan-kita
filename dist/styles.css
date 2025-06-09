@@ -62,7 +62,7 @@ h3 * {
 
 .nav-links-mobile {
   position: absolute;
-  top: calc(100%);
+  top: calc(110%);
   right: 4%;
   left: 4%;
   background-color: rgba(164, 180, 101, 0.8);
@@ -144,4 +144,26 @@ h3 * {
 
 .animate-slide-down {
   animation: slideDown 0.8s ease-out forwards;
+}
+
+.swiper-pagination-bullet {
+  background: #233f33;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #233f33;
+  opacity: 1;
+}
+
+.swiper-container-fix {
+  overflow: visible !important;
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  padding: 20px;
 }

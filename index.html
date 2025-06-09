@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,21 +16,30 @@
       rel="stylesheet"
     />
 
+    <!-- CDN Swiper Js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="./dist/styles.css" />
   </head>
   <body class="h-[3000px]">
     <!-- Nav -->
-    <nav class="z-50 fixed top-0 left-0 right-0 p-4 animate-slide-down">
+    <nav class="z-50 fixed top-0 left-0 right-0 animate-slide-down">
       <div
-        class="container mx-auto max-w-4xl flex justify-between items-center bg-[#A4B465]/80 p-4 rounded-lg shadow-lg"
+        class="container mx-auto flex justify-between items-center bg-[#A4B465]/90 p-4 shadow-lg"
       >
         <div class="logo">
-          <img
-            src="./assets/logo-with-text.svg"
-            alt="LestarikanKami"
-            class="h-[40px]"
-          />
+          <a href=".">
+            <img
+              src="./assets/logo-with-text.svg"
+              alt="LestarikanKami"
+              class="h-[40px]"
+            />
+          </a>
         </div>
         <ul class="nav-links menu flex gap-4 text-xs">
           <li>
@@ -120,8 +129,9 @@
     </section>
 
     <!-- Tentang -->
+    <!-- TODO: Tambahin Animasi -->
     <section id="tentang" class="bg-[#F5ECD5] relative">
-      <div class="waves">
+      <div class="waves scale-y-50">
         <img
           src="./assets/wave-hero-tentang-2.svg"
           alt=""
@@ -130,16 +140,16 @@
         <img
           src="./assets/wave-hero-tentang-3.svg"
           alt=""
-          class="absolute top-4 right-0 left-0 z-4"
+          class="absolute top-4 md:top-8 right-0 left-0 z-4"
         />
         <img
           src="./assets/wave-hero-tentang-1.svg"
           alt=""
-          class="absolute top-8 right-0 left-0 z-2"
+          class="absolute top-8 md:top-16 right-0 left-0 z-2"
         />
       </div>
       <div
-        class="container px-4 mx-auto pb-20 lg:pt-60 pt-40 flex flex-col md:flex-row items-center justify-stretch lg:gap-8 gap-4 w-full relative h-[700px]"
+        class="container px-4 mx-auto pb-20 lg:pt-60 pt-40 flex flex-col md:flex-row items-center justify-stretch gap-8 w-full relative h-[700px]"
       >
         <div class="w-full">
           <h2 class="text-[#233f33] text-2xl lg:text-4xl font-bold uppercase">
@@ -153,12 +163,18 @@
         </div>
 
         <div
-          class="misi relative lg:absolute lg:right-4 lg:top-70 w-100 h-36 rounded-full flex items-center justify-start lg:justify-center text-center px-6 py-4 scale-70 md:scale-100"
+          class="misi relative lg:absolute lg:right-4 lg:top-70 w-100 h-36 rounded-full flex items-center justify-start lg:justify-center text-center px-6 py-4 scale-80 md:scale-100"
         >
           <img
             src="./assets/cloud.svg"
-            alt="Daun"
+            alt="LestarikanKita"
             class="absolute left-0 right-0"
+          />
+
+          <img
+            src="./assets/merpati.png"
+            alt="LestarikanKita"
+            class="absolute md:-left-5 md:-top-12 right-5 lg:right-0 -top-20 w-[120px] z-10 scale-x-[-1] md:scale-x-100"
           />
 
           <h3
@@ -169,7 +185,7 @@
 
           <!-- Teks -->
           <p
-            class="absolute z-10 text-xs px-8 leading-snug font-medium text-white right-0 left-0"
+            class="absolute z-10 text-xs px-8 leading-snug font-medium text-white right-0 left-0 scale-85 lg:scale-100"
           >
             Mewujudkan generasi muda Indonesia yang aktif, peduli, dan berdaya
             dalam menjaga kelestarian lingkungan demi masa depan yang
@@ -209,7 +225,152 @@
     </section>
 
     <!-- Realita -->
-    <section id="realita" class="bg-[#d8ccaf]"></section>
+    <!-- TODO: Tambahin Animasi -->
+    <!-- TODO: Fetch data json -->
+    <section id="realita" class="bg-[#d8ccaf]">
+      <div class="container px-4 pb-20 pt-40 lg:pt-60 mx-auto">
+        <p class="uppercase font-bold">Realita</p>
+        <h2 class="text-[#233f33] text-2xl lg:text-4xl font-bold uppercase">
+          Kondisi Indonesia Saat Ini
+        </h2>
+
+        <div class="kondisi-carousel mt-8">
+          <div
+            id="carousel-wrapper"
+            class="overflow-hidden flex snap-x snap-mandatory scroll-smooth no-scrollbar"
+          >
+            <!-- Swiper Container -->
+            <div class="flex flex-col items-center w-full">
+              <div
+                class="swiper mySwiper w-full swiper-container-fix overflow-visible"
+              >
+                <div class="swiper-wrapper overflow-visible">
+                  <!-- Swiper Slide 1 -->
+                  <div
+                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300 p-10"
+                  >
+                    <div
+                      class="bg-[#706242] shadow-md relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto p-10 flex items-center justify-center hover:shadow-2xl"
+                    >
+                      <img
+                        src="./assets/realita/global-warming.png"
+                        alt="global-warming"
+                        class="h-[180px]"
+                      />
+                    </div>
+                    <div
+                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                    >
+                      <p class="opacity-80 text-sm font-medium">
+                        Indonesia mengalami kenaikan suhu rata-rata 0,3 - 0,6°C
+                        pada 2025.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Swiper Slide 2 -->
+                  <div
+                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300 p-10"
+                  >
+                    <div
+                      class="bg-[#706242] shadow-md hover:shadow-xl relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto p-10 flex items-center justify-center"
+                    >
+                      <img
+                        src="./assets/realita/deforestasi.png"
+                        alt="deforestasi"
+                        class="h-[180px]"
+                      />
+                    </div>
+                    <div
+                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                    >
+                      <p class="opacity-80 text-sm font-medium">
+                        Tahun 2024, Indonesia kehilangan 261.575 hektare hutan
+                        (4x luas Jakarta).
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Swiper Slide 3 -->
+                  <div
+                    class="swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300 p-10"
+                  >
+                    <div
+                      class="bg-[#706242] shadow-md hover:shadow-xl flex items-center justify-center p-10 relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
+                    >
+                      <img
+                        src="./assets/realita/sampah-di-laut.png"
+                        alt="Sampah di laut"
+                        class="h-[180px]"
+                      />
+                    </div>
+                    <div
+                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                    >
+                      <p class="opacity-80 text-sm font-medium">
+                        Indonesia adalah penghasil sampah plastik laut terbesar
+                        kedua di dunia. 0,27 - 0,9 juta ton sampah plastik masuk
+                        ke laut setiap tahun.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Swiper Slide 4 -->
+                  <div
+                    class="p-10 swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
+                  >
+                    <div
+                      class="shadow-lg bg-[#706242] p-10 flex items-center justify-center relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
+                    >
+                      <img
+                        src="./assets/realita/kekurangan-air-bersih.png"
+                        alt="Kekurangan air bersih"
+                        class="h-[180px]"
+                      />
+                    </div>
+                    <div
+                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                    >
+                      <p class="opacity-80 text-sm font-medium">
+                        1 dari 4 orang di Indonesia berisiko kekurangan air
+                        bersih pada 2025
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Swiper Slide 5 -->
+                  <div
+                    class="p-10 swiper-slide group relative flex flex-col items-center z-0 hover:z-30 transition-all duration-300"
+                  >
+                    <div
+                      class="shadow-md hover:shadow-lg bg-[#706242] p-10 flex items-center justify-center relative w-[280px] h-[240px] rounded-xl transition-all duration-300 group-hover:scale-110 mx-auto"
+                    >
+                      <img
+                        src="./assets/realita/terumbu-karang.png"
+                        alt="global-warming"
+                        class="h-[180px]"
+                      />
+                    </div>
+                    <div
+                      class="lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 mt-6 text-center px-4"
+                    >
+                      <p class="opacity-80 text-sm font-medium">
+                        Indonesia berisiko kehilangan 25-82% tutupan terumbu
+                        karang pada 2100 dan penurunan populasi burung hingga
+                        60% di Sulawesi pada 2050 akibat perubahan iklim.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination Dots BELOW the carousel -->
+              <div class="swiper-pagination mt-6 !relative"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Aksi -->
     <!-- Komunitas -->
