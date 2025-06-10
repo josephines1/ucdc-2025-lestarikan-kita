@@ -39,7 +39,7 @@ h3 * {
 .nav-mobile div {
   height: 3px;
   border-radius: 5px;
-  background-color: #000;
+  background-color: #fff;
   transform-origin: top right;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -73,7 +73,7 @@ h3 * {
 }
 
 .nav-links-mobile.active {
-  height: 200px;
+  height: 215px;
 }
 
 .nav-links-mobile li {

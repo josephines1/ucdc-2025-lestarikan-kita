@@ -24,46 +24,55 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./dist/styles.css" />
+    <link rel="stylesheet" href="./dist/css/styles.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/logo-only.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <!-- Nav -->
     <nav
-      class="z-50 fixed top-0 left-0 right-0 animate-slide-down bg-[#A4B465]/90 shadow-lg"
+      class="z-150 fixed top-0 left-0 right-0 animate-slide-down bg-[#22412e]/60 shadow-lg text-white"
     >
       <div class="container mx-auto flex justify-between items-center p-4">
         <div class="logo">
           <a href=".">
             <img
-              src="./assets/logo-with-text.svg"
-              alt="LestarikanKami"
+              src="./assets/logo-text-white.png"
+              alt="LestarikanKita"
               class="h-[40px]"
             />
           </a>
         </div>
-        <ul class="nav-links menu flex gap-4 text-xs">
+        <ul class="nav-links menu flex gap-8 text-xs">
           <li>
             <a
-              class="hover:text-white transition-all duration-300"
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
               href="#tentang"
               >Tentang</a
             >
           </li>
           <li>
             <a
-              class="hover:text-white transition-all duration-300"
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
               href="#realita"
               >Realita</a
             >
           </li>
           <li>
-            <a class="hover:text-white transition-all duration-300" href="#aksi"
+            <a
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
+              href="#aksi"
               >Aksi</a
             >
           </li>
           <li>
             <a
-              class="px-6 py-3 rounded-md transition-all duration-300 bg-white"
+              class="py-3 px-6 rounded-lg bg-[#FFB900] hover:bg-[#FFCF50] uppercase font-bold text-white shadow-lg transition-all duration-300"
               href="./kuis.html"
               target="_blank"
               >Seberapa Hijau Kamu?</a
@@ -84,11 +93,11 @@
           <li><a href="#tentang">Tentang</a></li>
           <li><a href="#realita">Realita</a></li>
           <li><a href="#aksi">Aksi</a></li>
-          <li>
+          <li class="px-4">
             <a
               href="./kuis.html"
               target="_blank"
-              class="bg-white px-4 py-1.5 rounded-md"
+              class="py-3 px-6 rounded-lg bg-[#FFB900] hover:bg-[#FFCF50] uppercase font-bold text-white shadow-lg block w-full transition-all duration-300"
               >Seberapa Hijau Kamu?</a
             >
           </li>
@@ -121,7 +130,7 @@
       </div>
       <div class="absolute bottom-0 animate-slide-up">
         <img
-          src="./assets/wave-hero-tentang-4.svg"
+          src="./assets/waves/waves-hero-1.svg"
           alt="LestarikanKita"
           class="w-screen h-full"
         />
@@ -130,40 +139,40 @@
 
     <!-- Tentang -->
     <!-- TODO: Tambahin Animasi -->
-    <section id="tentang" class="bg-[#F5ECD5] relative">
-      <div class="waves scale-y-50">
+    <section id="tentang" class="bg-[#F4ECD5] relative">
+      <div class="waves">
         <img
-          src="./assets/wave-hero-tentang-2.svg"
+          src="./assets/waves/waves-tentang-1.svg"
           alt=""
-          class="absolute top-0 right-0 left-0 z-6"
+          class="absolute top-0 right-0 left-0 z-6 scale-y-150"
         />
         <img
-          src="./assets/wave-hero-tentang-3.svg"
+          src="./assets/waves/waves-tentang-2.svg"
           alt=""
-          class="absolute top-4 md:top-8 right-0 left-0 z-4"
+          class="absolute top-0 right-0 left-0 z-4 scale-y-130"
         />
         <img
-          src="./assets/wave-hero-tentang-1.svg"
+          src="./assets/waves/waves-tentang-3.svg"
           alt=""
-          class="absolute top-8 md:top-16 right-0 left-0 z-2"
+          class="absolute top-0 right-0 left-0 z-2 scale-y-100"
         />
       </div>
       <div
-        class="container px-4 mx-auto pb-20 lg:pt-60 pt-40 flex flex-col md:flex-row items-center justify-stretch gap-8 w-full relative h-[700px]"
+        class="container px-4 mx-auto pb-20 pt-20 flex flex-col md:flex-row items-center md:items-start justify-start gap-8 w-full relative h-[650px] md:h-[700px]"
       >
-        <div class="w-full">
-          <h2 class="text-[#233f33] text-2xl lg:text-4xl font-bold uppercase">
+        <div class="w-full lg:sticky top-30 py-20">
+          <h2 class="text-[#22412E] text-2xl lg:text-4xl font-bold uppercase">
             Tentang
           </h2>
           <img
-            src="./assets/logo-with-text.svg"
+            src="./assets/logo-text-green.png"
             alt="LestarikanKita"
             class="h-[50px] md:h-[100px]"
           />
         </div>
 
         <div
-          class="visi relative lg:absolute lg:right-4 lg:top-70 w-100 h-36 rounded-full flex items-center justify-start lg:justify-center text-center px-6 py-4 scale-80 md:scale-100"
+          class="visi relative lg:absolute lg:right-4 lg:top-30 w-100 h-36 rounded-full flex items-center justify-start lg:justify-center text-center px-6 py-4 scale-80 md:scale-100"
         >
           <img
             src="./assets/cloud.svg"
@@ -178,14 +187,14 @@
           />
 
           <h3
-            class="text-[#233f33] text-lg lg:text-2xl font-bold uppercase absolute right-0 -bottom-5"
+            class="text-[#22412E] text-lg lg:text-2xl font-bold uppercase absolute right-0 -bottom-5"
           >
             Visi
           </h3>
 
           <!-- Teks -->
           <p
-            class="absolute z-10 text-xs px-8 leading-snug font-medium text-white right-0 left-0 scale-85 lg:scale-100"
+            class="absolute z-10 text-xs px-8 leading-snug font-semibold text-white right-0 left-0 scale-85 lg:scale-100"
           >
             Mewujudkan generasi muda Indonesia yang aktif, peduli, dan berdaya
             dalam menjaga kelestarian lingkungan demi masa depan yang
@@ -194,7 +203,7 @@
         </div>
 
         <div
-          class="misi relative md:absolute -bottom-[180px] md:-bottom-10 md:right-40 w-150 rounded-full flex items-center justify-start md:justify-center text-center px-6 py-4 scale-60 md:scale-100"
+          class="misi relative md:absolute -bottom-[200px] md:bottom-40 md:right-40 w-150 rounded-full flex items-center justify-start md:justify-center text-center px-6 py-4 scale-60 md:scale-100 z-100"
         >
           <img
             src="./assets/pohon.png"
@@ -203,34 +212,47 @@
           />
 
           <h3
-            class="text-[#233f33] text-lg lg:text-2xl font-bold uppercase absolute right-30 bottom-35 md:right-28"
+            class="text-[#22412E] text-lg lg:text-2xl font-bold uppercase absolute right-30 bottom-35 md:right-28"
           >
             Misi
           </h3>
 
-          <p class="text-xs absolute left-5 w-50 -top-15">
+          <p
+            class="font-semibold text-white text-xs absolute left-5 w-50 -top-15"
+          >
             Menginspirasi dan memberdayakan anak muda Indonesia untuk mengambil
             aksi nyata dalam menjaga dan melestarikan lingkungan.
           </p>
-          <p class="text-xs absolute left-50 -top-45 w-50">
+          <p
+            class="font-semibold text-white text-xs absolute left-50 -top-45 w-50"
+          >
             Menyediakan edukasi lingkungan yang inovatif, interaktif, dan mudah
             diakses melalui teknologi digital.
           </p>
-          <p class="text-xs absolute right-5 w-50 -top-15">
+          <p
+            class="font-semibold text-white text-xs absolute right-5 w-50 -top-15"
+          >
             Mendorong kolaborasi komunitas dan kampanye aksi nyata demi
             terciptanya perubahan positif bagi bumi.
           </p>
         </div>
+      </div>
+      <div class="waves">
+        <img
+          src="./assets/waves/waves-tentang-4.svg"
+          alt="Waves"
+          class="absolute bottom-0 left-0 right-0 z-50"
+        />
       </div>
     </section>
 
     <!-- Realita -->
     <!-- TODO: Tambahin Animasi -->
     <!-- TODO: Fetch data json -->
-    <section id="realita" class="bg-[#d8ccaf]">
-      <div class="container px-4 pb-20 pt-40 lg:pt-60 mx-auto">
-        <p class="uppercase font-bold">Realita</p>
-        <h2 class="text-[#233f33] text-2xl lg:text-4xl font-bold uppercase">
+    <section id="realita" class="bg-[#D7CCAE]">
+      <div class="container px-4 pb-20 pt-20 lg:pt-60 mx-auto">
+        <p class="uppercase font-bold text-[#22412E]">Realita</p>
+        <h2 class="text-[#22412E] text-2xl lg:text-4xl font-bold uppercase">
           Kondisi Indonesia Saat Ini
         </h2>
 
@@ -412,42 +434,20 @@
       </div>
     </section>
 
-    <!-- Kuis -->
-    <section id="kuis" class="bg-[#759560]">
-      <div
-        class="container py-20 px-4 mx-auto flex flex-col md:flex-row items-start md:items-center justify-start gap-16 md:gap-8"
-      >
-        <img
-          src="./assets/maskot.png"
-          alt="Maskot LestarikanKita"
-          class="max-w-[300px] md:max-w-[600px] mx-auto"
-        />
-        <div class="kuis-text">
-          <p class="uppercase font-bold">Kuis Interaktif</p>
-          <h2 class="text-[#233f33] text-2xl lg:text-4xl font-bold uppercase">
-            Seberapa Hijau Kamu?
-          </h2>
-          <p>
-            Cek seberapa besar jejak sampahmu dan dapatkan tips agar lebih ramah
-            lingkungan!
-          </p>
-          <a
-            href="./kuis.html"
-            target="_blank"
-            class="py-3 px-6 rounded-lg bg-white shadow-lg inline-block mt-4"
-            >Cek Sekarang!</a
-          >
-        </div>
-      </div>
-    </section>
-
     <!-- Aksi Kampanye -->
     <!-- TODO: tambahkan animasi -->
-    <section id="aksi" class="bg-[#759560]">
-      <div class="container py-20 px-4 mx-auto">
-        <p class="uppercase font-bold">Aksi dari Indonesia</p>
-        <h2 class="text-2xl lg:text-4xl font-bold uppercase">
-          Tindakan Nyata untuk Perubahan
+    <section id="aksi" class="bg-[#759560] relative">
+      <div class="waves">
+        <img
+          src="./assets/waves/waves-aksi-1.svg"
+          alt="LestarikanKita"
+          class="absolute top-0 right-0 left-0"
+        />
+      </div>
+      <div class="container pb-20 pt-40 px-4 mx-auto">
+        <p class="uppercase font-bold text-white">Aksi dari Indonesia</p>
+        <h2 class="text-2xl lg:text-4xl font-bold uppercase text-white">
+          Yuk, dukung aksi komunitas lingkungan di Indonesia!
         </h2>
         <div
           id="cards-container"
@@ -459,59 +459,129 @@
         <!-- Modal Popup -->
         <div
           id="modal"
-          class="fixed inset-0 bg-black/50 hidden justify-center items-center"
+          class="fixed inset-0 bg-black/50 hidden justify-center items-center z-200"
         >
-          <div class="bg-white p-6 rounded-lg w-[90%]">
-            <h2 id="modal-title" class="font-semibold text-2xl mb-4"></h2>
-            <p id="modal-action" class="mb-4"></p>
-            <p id="modal-region" class="mb-4"></p>
-            <p id="modal-activities" class="mb-4"></p>
-            <div class="flex justify-end space-x-4">
-              <button
-                class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
-                onclick="closeModal()"
-              >
-                Close
-              </button>
-              <button
-                id="modal-redirect-btn"
-                class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-                target="_blank"
-              >
-                Go to Instagram
-              </button>
+          <div
+            class="bg-[#F4ECD5] p-6 rounded-lg w-[90%] max-w-4xl max-h-[90vh] overflow-y-auto"
+          >
+            <div class="flex justify-between items-center mb-6">
+              <h2
+                id="modal-title"
+                class="text-2xl font-bold text-[#22412E] uppercase"
+              ></h2>
+              <div class="flex space-x-4">
+                <button
+                  class="text-[#22412E] py-2 px-4 rounded cursor-pointer transition-all"
+                  onclick="closeModal()"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div id="modal-content" class="space-y-6">
+              <!-- Content will be dynamically inserted here by JavaScript -->
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Kuis -->
+    <section
+      id="kuis"
+      class="bg-[#759560] py-20 px-4 lg:px-20 lg:min-h-[100vh] relative"
+    >
+      <div
+        class="container mx-auto p-10 rounded-xl shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-start gap-16 md:gap-8 bg-[#D7CCAE] z-10 relative"
+      >
+        <img
+          src="./assets/maskot.png"
+          alt="Maskot LestarikanKita"
+          class="max-w-[300px] md:max-w-[600px] mx-auto"
+        />
+        <div class="kuis-text">
+          <p class="uppercase font-bold text-[#22412E]">Kuis Interaktif</p>
+          <h2 class="text-[#22412E] text-2xl lg:text-4xl font-bold uppercase">
+            Seberapa Hijau Kamu?
+          </h2>
+          <p>
+            Cek seberapa besar jejak sampahmu dan dapatkan tips agar lebih ramah
+            lingkungan!
+          </p>
+          <a
+            href="./kuis.html"
+            target="_blank"
+            class="py-3 px-6 rounded-lg bg-[#FFB900] uppercase font-bold text-sm text-white shadow-lg inline-block mt-4"
+            >Cek Sekarang!</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="overlay h-[50vh] bg-[#F4ECD5] absolute bottom-0 left-0 right-0"
+      ></div>
+    </section>
+
     <!-- Footer -->
     <!-- TODO: tambahkan animasi -->
-    <footer>
+    <footer class="bg-[#F4ECD5]">
       <div
         class="container py-10 px-4 mx-auto flex flex-col md:flex-row gap-8 md:gap-4 justify-start items-start md:justify-between md:items-center"
       >
         <img
-          src="./assets/logo-with-text.svg"
+          src="./assets/logo-text-green.png"
           alt="LestarikanKita"
           class="w-[200px]"
         />
-        <ul class="text-sm flex flex-col gap-2">
-          <li><a href=".">Home</a></li>
-          <li><a href="#">Tentang</a></li>
-          <li><a href="#">Realita</a></li>
-          <li><a href="#">Aksi</a></li>
+        <ul class="text-sm flex flex-col md:flex-row gap-4 md:gap-8">
+          <li>
+            <a
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
+              href="."
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
+              href="#tentang"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
+              href="#realita"
+              >Realita</a
+            >
+          </li>
+          <li>
+            <a
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
+              href="#aksi"
+              >Aksi</a
+            >
+          </li>
         </ul>
-        <div class="md:w-[400px]">
-          <h4 class="font-bold text-xl mb-2">Seberapa Hijau Kamu?</h4>
-          <a
-            href="./kuis.html"
-            class="px-4 py-1.5 bg-[#759560] text-white font-medium inline-block rounded-md"
-            >Cari tau disini!</a
-          >
-        </div>
       </div>
+      <p class="text-center text-xs opacity-50 pb-5">
+        LestarikanKita &copy; 2025
+      </p>
     </footer>
 
     <!-- JavaScript -->

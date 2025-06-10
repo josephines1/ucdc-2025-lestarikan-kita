@@ -4,26 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kuis Ramah Lingkungan</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              "eco-green": "#22c55e",
-              "eco-dark": "#166534",
-              "eco-light": "#dcfce7",
+              "eco-green": "#6E9135",
+              "eco-dark": "#22412E",
+              "eco-light": "#C9FA84",
             },
           },
         },
       };
     </script>
-    <link rel="stylesheet" href="./dist/styles.css" />
+
+    <!-- CDN Swiper Js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="./dist/css/styles.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/logo-only.png"
+      type="image/x-icon"
+    />
   </head>
 
-  <body
-    class="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
-  >
+  <body class="min-h-screen bg-[#F4ECD5]">
+    <!-- Nav -->
+    <nav class="w-full animate-slide-down">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="logo">
+          <a href=".">
+            <img
+              src="./assets/logo-text-green.png"
+              alt="LestarikanKita"
+              class="h-[40px]"
+            />
+          </a>
+        </div>
+        <ul class="nav-links menu flex gap-8 text-xs">
+          <li>
+            <a
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
+              href="#tentang"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
+              href="#realita"
+              >Realita</a
+            >
+          </li>
+          <li>
+            <a
+              class="opacity-80 hover:opacity-100 transition-all duration-300"
+              href="#aksi"
+              >Aksi</a
+            >
+          </li>
+          <li>
+            <a
+              class="py-3 px-6 rounded-lg bg-[#FFB900] hover:bg-[#FFCF50] uppercase font-bold text-[#22412E] shadow-lg transition-all duration-300"
+              href="./kuis.html"
+              target="_blank"
+              >Seberapa Hijau Kamu?</a
+            >
+          </li>
+        </ul>
+
+        <!-- Nav on Mobile -->
+        <div class="nav-mobile">
+          <input type="checkbox" />
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <!-- Nav Links on Mobile -->
+        <ul class="nav-links-mobile text-xs md:hidden rounded-lg">
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#realita">Realita</a></li>
+          <li><a href="#aksi">Aksi</a></li>
+          <li class="px-4">
+            <a
+              href="./kuis.html"
+              target="_blank"
+              class="py-3 px-6 rounded-lg bg-[#FFB900] hover:bg-[#FFCF50] uppercase font-bold text-[#22412E] shadow-lg block w-full transition-all duration-300"
+              >Seberapa Hijau Kamu?</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
       <div
@@ -39,26 +131,16 @@
       <!-- Header dengan icon dan animasi -->
       <div class="text-center mb-10">
         <div
-          class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-eco-green to-emerald-600 rounded-full mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
+          class="inline-flex items-center justify-center w-20 h-20 mb-6 transform hover:scale-105 transition-transform duration-300"
         >
-          <svg
-            class="w-10 h-10 text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          <img src="./assets/logo-only.png" alt="LestarikanKita" />
         </div>
         <h1
-          class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-eco-green to-emerald-600 bg-clip-text text-transparent mb-4"
+          class="text-4xl font-bold bg-gradient-to-r from-eco-dark to-eco-green bg-clip-text text-transparent mb-4"
         >
           🌱 Kuis Ramah Lingkungan
         </h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p class="text-md text-eco-dark opacity-80 max-w-2xl mx-auto">
           Yuk cek seberapa hijau gaya hidupmu! Jawab pertanyaan berikut untuk
           mengetahui tingkat kepedulianmu terhadap lingkungan.
         </p>
@@ -116,7 +198,7 @@
             </button>
             <button
               id="next-button"
-              class="flex items-center space-x-2 bg-gradient-to-r from-eco-green to-emerald-600 hover:from-emerald-600 hover:to-eco-green text-white py-3 px-6 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              class="flex items-center space-x-2 bg-gradient-to-r from-eco-dark to-emerald-600 hover:from-emerald-600 hover:to-eco-dark text-white py-3 px-6 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <span>Selanjutnya</span>
               <svg
@@ -191,6 +273,7 @@
       </div>
     </div>
 
+    <script src="./dist/js/script.js"></script>
     <script src="./dist/js/kuis.js"></script>
   </body>
 </html>
