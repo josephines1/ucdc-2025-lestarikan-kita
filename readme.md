@@ -6,7 +6,7 @@ Universitas Negeri Jakarta
 
 ## Anggota Tim
 
-- Ketua : Secilia Deartha Palmaria Siahaan
+- Ketua : Secilia Deartha
 - Anggota : Josephine
 
 ## Deskripsi Karya
