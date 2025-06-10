@@ -39,14 +39,6 @@ const communityData = [
     instagram: "https://www.instagram.com/iifoundation/",
     image: "indonesia-indah-foundation.png",
   },
-  {
-    name: "EcoNusa",
-    action: "Penanaman mangrove, aksi pembersihan pantai",
-    region: "Jayapura",
-    activities: "Penanaman mangrove di pesisir, aksi bersih-bersih pantai",
-    instagram: "https://www.instagram.com/econusa.id/",
-    image: "econusa.png",
-  },
 ];
 
 // Function to generate cards dynamically
