@@ -30,10 +30,10 @@ const swiper = new Swiper(".realita-swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  // },
   loop: true,
   breakpoints: {
     0: {
