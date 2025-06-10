@@ -2,49 +2,48 @@ const communityData = [
   {
     name: "Greenpeace Indonesia",
     action:
-      "Kampanye lingkungan, edukasi, aksi kreatif tanpa kekerasan, dan advokasi isu lingkungan.",
+      "Kampanye lingkungan, edukasi, aksi kreatif tanpa kekerasan, advokasi isu lingkungan",
     region:
-      "12 kota besar (Jakarta, Bandung, Semarang, Yogyakarta, Malang, Surabaya, Bali, Padang, Pekanbaru, Pontianak, Jayapura, Sorong)",
+      "Jakarta, Bandung, Semarang, Yogyakarta, Malang, Surabaya, Bali, Padang, Pekanbaru, Pontianak, Jayapura, Sorong",
     activities:
-      "Relawan bisa ikut kampanye, edukasi ke sekolah, aksi lapangan, hingga membuat kampanye sendiri. Terbuka untuk semua usia, termasuk pelajar SMA.",
+      "Ikut kampanye, edukasi ke sekolah, aksi lapangan, Membuat kampanye sendiri.",
     instagram: "https://www.instagram.com/greenpeaceid/",
     image: "greenpeace-indonesia.png",
   },
   {
     name: "Greeneration Foundation",
     action:
-      "Edukasi, kampanye, mentoring, dan aksi nyata pengelolaan sampah serta konsumsi ramah lingkungan.",
-    region: "Nasional, terbuka untuk siapa saja.",
+      "Edukasi, kampanye, mentoring, aksi nyata pengelolaan sampah, konsumsi ramah lingkungan",
+    region: "Nasional",
     activities:
-      "Program mentoring, kampanye digital, aksi EcoRanger, Citarum Repair, Driving Refill Solution, dan relawan Greeneration Buddies yang terbuka untuk umum.",
+      "Program mentoring, kampanye digital, aksi EcoRanger, Citarum Repair, Driving Refill Solution, relawan Greeneration Buddies",
     instagram: "https://www.instagram.com/greenerationid",
     image: "greeneration.png",
   },
   {
     name: "Lindungi Hutan",
-    action: "Penanaman pohon dan kampanye penghijauan.",
+    action: "Penanaman pohon, kampanye penghijauan",
     region:
-      "Banyak kota di Indonesia, bisa ikut secara langsung atau donasi bibit.",
+      "Banyak kota di Indonesia, bisa ikut secara langsung atau donasi bibit",
     activities:
-      "Penanaman pohon bersama, edukasi, monitoring pohon, dan pemberdayaan petani bibit.",
+      "Penanaman pohon bersama, edukasi, monitoring pohon, pemberdayaan petani bibit",
     instagram: "https://www.instagram.com/lindungihutan/",
     image: "lindungi-hutan.png",
   },
   {
     name: "Indonesia Indah Foundation (IIF)",
-    action: "Hari Bersih Indonesia, edukasi lingkungan, dan program relawan.",
+    action: "Hari Bersih Indonesia, edukasi lingkungan, program relawan",
     region: "Nasional.",
     activities:
-      "Bersih-bersih sampah, edukasi di sekolah, dan kampanye perubahan perilaku ramah lingkungan.",
+      "Bersih-bersih sampah, edukasi di sekolah, kampanye perubahan perilaku ramah lingkungan",
     instagram: "https://www.instagram.com/iifoundation/",
     image: "indonesia-indah-foundation.png",
   },
   {
     name: "EcoNusa",
-    action: "Penanaman mangrove dan aksi pembersihan pantai.",
-    region: "Jayapura, Papua.",
-    activities:
-      "Komunitas Pemuda Peduli Lingkungan Asri dan Bersih (Pepelingasih) Jayapura secara rutin mengadakan penanaman mangrove di pesisir serta aksi bersih-bersih pantai.",
+    action: "Penanaman mangrove, aksi pembersihan pantai",
+    region: "Jayapura",
+    activities: "Penanaman mangrove di pesisir, aksi bersih-bersih pantai",
     instagram: "https://www.instagram.com/econusa.id/",
     image: "econusa.png",
   },
@@ -193,7 +192,7 @@ function openModal(index) {
     .split(",")
     .map(
       (region) =>
-        `<span class="inline-block text-sm border-[#2A2019] border-1 text-[#2A2019] px-2 py-1 rounded-md m-1">${region.trim()}</span>`
+        `<span class="inline-block text-sm border-[#2A2019] border-1 capitalize text-[#2A2019] px-2 py-1 rounded-md m-1">${region.trim()}</span>`
     )
     .join("");
   regionColumn.innerHTML = `<div class="mx-1 font-semibold mb-2 text-[#22412E]">Wilayah</div>${regions}`;
@@ -205,7 +204,7 @@ function openModal(index) {
     .split(",")
     .map(
       (activity) =>
-        `<span class="inline-block text-sm border-[#2A2019] border-1 text-[#2A2019] px-2 py-1 rounded-md m-1">${activity.trim()}</span>`
+        `<span class="inline-block text-sm border-[#2A2019] border-1 capitalize text-[#2A2019] px-2 py-1 rounded-md m-1">${activity.trim()}</span>`
     )
     .join("");
   activitiesColumn.innerHTML = `<div class="font-semibold mb-2 text-[#22412E]">Kegiatan</div>${activities}`;
