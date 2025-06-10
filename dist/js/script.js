@@ -146,41 +146,58 @@ function generateCards() {
     );
     title.textContent = community.name;
 
+    const descriptionRow = document.createElement("div");
+    descriptionRow.classList.add(
+      "flex",
+      "justify-between",
+      "items-center",
+      "gap-4",
+      "lg:opacity-0",
+      "lg:group-hover:opacity-100",
+      "lg:transform",
+      "lg:-translate-y-2",
+      "lg:group-hover:translate-y-0",
+      "transition-all",
+      "duration-500",
+      "lg:max-h-0",
+      "lg:group-hover:max-h-20",
+      "overflow-hidden",
+      "mt-3"
+    );
+
+    // Description Text
     const description = document.createElement("p");
     description.classList.add(
       "text-light",
       "text-xs",
       "leading-relaxed",
-      "mt-3",
-      "lg:opacity-0",
-      "lg:group-hover:opacity-100",
-      "lg:transform",
-      "lg:group-hover:translate-y-0",
-      "transition-all",
-      "duration-500",
-      "lg:max-h-0",
-      "lg:group-hover:max-h-40",
-      "overflow-hidden"
+      "flex-1"
     );
     description.textContent = community.action;
 
+    // Button
     const detailButton = document.createElement("button");
     detailButton.classList.add(
       "bg-blue-500",
       "text-white",
-      "py-2",
-      "px-4",
-      "rounded",
-      "mt-4",
+      "rounded-full",
+      "w-8",
+      "h-8",
+      "flex",
+      "items-center",
+      "justify-center",
       "hover:bg-blue-600",
       "transition-all"
     );
-    detailButton.textContent = "Detail";
+    detailButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7l-10 10m0-10h10v10" /></svg>`;
     detailButton.onclick = () => openModal(index);
 
+    // Assemble
+    descriptionRow.appendChild(description);
+    descriptionRow.appendChild(detailButton);
+
     cardBody.appendChild(title);
-    cardBody.appendChild(description);
-    cardBody.appendChild(detailButton);
+    cardBody.appendChild(descriptionRow);
 
     card.appendChild(cardBody);
     cardsContainer.appendChild(card);
@@ -203,11 +220,13 @@ function openModal(index) {
     .setAttribute("href", data.instagram);
 
   modal.classList.remove("hidden");
+  modal.classList.add("flex");
 }
 
 function closeModal() {
   const modal = document.getElementById("modal");
   modal.classList.add("hidden");
+  modal.classList.remove("flex");
 }
 
 // Call generateCards function on page load

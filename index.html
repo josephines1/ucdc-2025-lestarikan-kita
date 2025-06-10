@@ -443,7 +443,6 @@
 
     <!-- Aksi Kampanye -->
     <!-- TODO: tambahkan animasi -->
-    <!-- TODO: sesuaikan konten -->
     <section id="aksi" class="bg-[#759560]">
       <div class="container py-20 px-4 mx-auto">
         <p class="uppercase font-bold">Aksi dari Indonesia</p>
@@ -460,9 +459,9 @@
         <!-- Modal Popup -->
         <div
           id="modal"
-          class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center"
+          class="fixed inset-0 bg-black/50 hidden justify-center items-center"
         >
-          <div class="bg-white p-6 rounded-lg w-[90%] sm:w-[70%] md:w-[50%]">
+          <div class="bg-white p-6 rounded-lg w-[90%]">
             <h2 id="modal-title" class="font-semibold text-2xl mb-4"></h2>
             <p id="modal-action" class="mb-4"></p>
             <p id="modal-region" class="mb-4"></p>
@@ -488,6 +487,32 @@
     </section>
 
     <!-- Footer -->
+    <!-- TODO: tambahkan animasi -->
+    <footer>
+      <div
+        class="container py-10 px-4 mx-auto flex flex-col md:flex-row gap-4 justify-between items-center"
+      >
+        <img
+          src="./assets/logo-with-text.svg"
+          alt="LestarikanKita"
+          class="w-[200px]"
+        />
+        <ul class="text-sm flex flex-col gap-2">
+          <li><a href=".">Home</a></li>
+          <li><a href="#">Tentang</a></li>
+          <li><a href="#">Realita</a></li>
+          <li><a href="#">Aksi</a></li>
+        </ul>
+        <div class="md:w-[400px]">
+          <h4 class="font-bold text-xl mb-2">Seberapa Hijau Kamu?</h4>
+          <a
+            href="./kuis.html"
+            class="px-4 py-1.5 bg-[#759560] text-white font-medium inline-block rounded-md"
+            >Cari tau disini!</a
+          >
+        </div>
+      </div>
+    </footer>
 
     <!-- JavaScript -->
     <script src="./dist/js/script.js"></script>
